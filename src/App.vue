@@ -11,7 +11,7 @@
 import { onMounted, ref } from 'vue';
 
 
-const books = ref([])
+const books = ref<any[]>([])
 
 const handleNew = () => fetch(import.meta.env.VITE_ROOT_API + '/books', {method: 'POST'}).then(()=>getBooks())
 
